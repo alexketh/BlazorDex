@@ -1807,11 +1807,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex\\Code\\BlazorDex\\BlazorDex.csproj",
+      "projectUniqueName": "C:\\Users\\Alex\\GitHub\\BlazorDex\\BlazorDex.csproj",
       "projectName": "BlazorDex",
-      "projectPath": "C:\\Users\\Alex\\Code\\BlazorDex\\BlazorDex.csproj",
+      "projectPath": "C:\\Users\\Alex\\GitHub\\BlazorDex\\BlazorDex.csproj",
       "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex\\Code\\BlazorDex\\obj\\",
+      "outputPath": "C:\\Users\\Alex\\GitHub\\BlazorDex\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

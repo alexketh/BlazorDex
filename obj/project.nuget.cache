@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UVCIOMpH+pYhhjtw4/NMbL8C3fMPPZDxz6NEkV6JEKyzVYiHNqi+67fipQXiJMOuh7rbKcckfkmoY2BJ+xBIXQ==",
+  "dgSpecHash": "V8tH08hcyhlmmVtiwFrOjq9MFu/1r3ksM9U/VbJXLUZtjF5PwEaMe6rV/QWkyepRJmTcTxsoCsXbuVWCz5fifw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\Code\\BlazorDex\\BlazorDex.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\GitHub\\BlazorDex\\BlazorDex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.12\\microsoft.aspnetcore.authorization.7.0.12.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.12\\microsoft.aspnetcore.components.7.0.12.nupkg.sha512",
