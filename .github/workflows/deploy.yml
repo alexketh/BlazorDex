@@ -9,25 +9,31 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '7.0.x'
+          dotnet-version: 7.0.x
 
-      - name: Publish .NET Core Project
+      - name: Publish .NET Project
         run: dotnet publish BlazorDex.csproj -c Release -o release --nologo
 
+      # Change the base-tag in index.html from '/' to '/BlazorDex' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html
         run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorDex\/" \/>/g' release/wwwroot/index.html
 
+      # Copy index.html to 404.html to serve the same file when a file is not found
+      - name: copy index.html to 404.html
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
+
+      # Add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project.
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
-        
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+
+      - name: Commit wwwroot to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: release/wwwroot
-          force_orphan: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: release/wwwroot
