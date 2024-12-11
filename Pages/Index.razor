@@ -8,7 +8,7 @@
     <div class="pokemon-row">
         @foreach (var p in pokemonList)
         {
-            <a href="/pokemon/@p.id">
+            <a href="BlazorDex/pokemon/@p.id">
                 <div class="pokemon-card">
                     <div class="pokemon_card_bg" style="background-color: @PokeColor.GetTypeColor(p.types[0].type.name)"></div>
                     <img src="@p.sprites.front_default" alt="@p.name">
