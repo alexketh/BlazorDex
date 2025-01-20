@@ -4,4 +4,4 @@ obj/
 .vs/
 *.user
 *.suo
-*.[Cc]ache
+.DS_Store
